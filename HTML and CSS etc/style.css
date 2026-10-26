@@ -1,0 +1,594 @@
+body {
+  background-color: #bdf8c2;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body h3 {
+  color: brown;
+}
+
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+.columns {
+  display: grid;
+  grid-template-columns: 13fr 55fr 27fr 5fr;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.columns > section:first-child {
+  padding-left: 20px;
+}
+
+.columns img {
+  max-width: 90%;
+  height: auto;
+  display: block;
+}
+
+.business-name {
+  font-size: 2.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.tagline {
+  font-size: 1.4rem;
+  margin-top: 0.2rem;
+}
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+.buttons a:hover {
+  background-color: #41c9ff;
+  transition: background-color 0.2s ease;
+}
+
+.buttons a {
+  display: inline-block;
+  background-color: #add8e6;
+  color: #000;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+.buttons a.active {
+  background-color:  #41c9ff;
+  color: brown;
+}
+.social-buttons img {
+  width: 29px;
+  height: 29px;
+  object-fit: contain;
+}
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.social-buttons a:hover {
+  background-color: #41c9ff;
+  transition: background-color 0.3s ease;
+}
+.introduction-text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+  @media (min-width: 901px) {
+    .page-content {
+      padding-left: 150px;
+      padding-right: 170px;
+  }
+    .video-container {
+      margin: 40px auto;
+      display: flex;
+      justify-content: center;
+  }
+    .video-container iframe {
+      aspect-ratio: 16 / 9;
+      width: 80%;
+      height: auto;
+      border: 0;
+  }
+}
+  @media (max-width: 1000px) {
+    .page-content {
+      padding-left: 50px;
+      padding-right: 70px;
+  }
+    .video-container {
+      margin: 40px auto;
+      display: flex;
+      justify-content: center;
+  }
+    .video-container iframe {
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      height: auto;
+      border: 0;
+  }
+}
+@media (max-width: 700px) {
+  .video-container {
+    width: 100%;
+    max-width: 100%;
+  }
+  .video-container iframe {
+    width: 100%;
+    max-width: 100%;
+  }
+  .columns {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .tagline {
+    padding: 0 16px;
+  }
+
+  .social-buttons {
+    flex-direction: row;
+  }
+  .header-line {
+    width: 95%;
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 0.0rem auto 1rem auto;
+  }
+}
+.video-container iframe {
+  aspect-ratio: 16 / 9;
+  }
+
+/* Same layout for National anthem panel, culture table, services table and image box */
+.national-anthem,
+.culture-values-table,
+.services-table,
+.image-grid-box {
+  margin: 2rem auto;
+  padding: 3rem;
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 50px;
+}
+.national-anthem > h2 {
+  margin-top: 0;
+  color: #000;
+  text-align: center;
+}
+.national-anthem-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.anthem-language {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+.anthem-language audio,
+.anthem-audio {
+  display: block;
+  width: min(100%, 260px);
+}
+.anthem-language h3 {
+  font-size: 1.2rem;
+}
+.anthem-language p {
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+@media (max-width: 700px) {
+  .national-anthem {
+    padding: 3rem;
+    height: auto;
+  }
+  .national-anthem-layout {
+    grid-template-columns: 1fr;
+  }
+}
+.feedback-form {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 50px;
+  padding: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+}
+.feedback-form h2 {
+  text-align: center;
+}
+
+/* Māori culture values and services layout */
+.culture-values-table,
+.services.table {
+  display: block;
+  border-spacing: 0;
+}
+
+.culture-values-table caption {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding-bottom: 1rem;
+  color: #000;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.culture-values-table tbody {
+  display: block;
+}
+
+.culture-values-table tr {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(0, 4fr);
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.culture-values-table th,
+.culture-values-table td {
+  text-align: left;
+}
+
+.culture-values-table h3,
+.culture-values-table h4,
+.culture-values-table p {
+  margin: 0;
+}
+
+.culture-values-table h4 {
+  font-style: italic;
+  color: rgb(62, 62, 62);
+  text-align: left;
+  line-height: 1.5rem;
+  padding-left: 5%;
+}
+
+.culture-values-table .value-description {
+  grid-column: 2;
+  font-size: .9rem;
+  line-height: 1.3;
+}
+
+.culture-values-table .value-description ul {
+  padding-left: 2rem;
+  margin-bottom: 0;
+}
+
+/* Feedback Form */
+.feedback-form form {
+  display: grid;
+  grid-template-columns: 130px 500px;
+  gap: 4px 10px;
+  justify-content: center;
+  transform: translateX(-20px);
+}
+
+.feedback-form form label {
+  text-align: right;
+}
+
+.feedback-form form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  resize: vertical;
+}
+
+.feedback-form form input[type="text"] {
+  box-sizing: border-box;
+  width: 80%;
+}
+
+.feedback-form form input[type="reset"],
+.feedback-form form input[type="submit"] {
+  margin-top: 4px;
+  padding: 10px 12px;
+  width: 150px;
+  font-weight: bold;
+  color: black;
+  background-color: #41c9ff;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedback-actions {
+  grid-column: 2 / 3;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 4px;
+}
+
+.feedback-form form input[type="reset"]:hover,
+.feedback-form form input[type="submit"]:hover {
+  background-color: #add8e6;
+  color: black;
+}
+
+/* Services table */
+.services-table caption {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding-bottom: 1rem;
+  color: #000;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.services-table tbody {
+  display: block;
+}
+
+.services-table tr {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) minmax(0, 4fr);
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.services-table th,
+.services-table td {
+  text-align: left;
+}
+
+.services-table h3,
+.services-table p {
+  margin: 0;
+}
+
+.services-table .service-title {
+  align-self: start;
+}
+
+.services-table .service-description {
+  grid-column: 2;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.service-signups {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: .3rem;
+}
+
+.service-signups a {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 10px 12px;
+  width: 180px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #41c9ff;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.service-signups a:hover {
+  background-color: #add8e6;
+  color: black;
+}
+
+@media (min-width: 701px) and (max-width: 1100px) {
+  .service-signups {
+    flex-wrap: nowrap;
+  }
+
+  .service-signups a {
+    width: auto;
+    flex: 1 1 180px;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .feedback-form form {
+    grid-template-columns: 1fr;
+    transform: none;
+  }
+
+  .feedback-form form label {
+    text-align: left;
+  }
+
+  .feedback-form form input[type="text"],
+  .feedback-form form textarea {
+    width: 100%;
+  }
+
+  .feedback-actions {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .feedback-form {
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+
+  .feedback-form form {
+    grid-template-columns: 1fr;
+    transform: none;
+  }
+
+  .feedback-form form label {
+    text-align: left;
+  }
+
+  .feedback-form form input[type="text"],
+  .feedback-form form textarea {
+    width: 100%;
+  }
+
+  .feedback-actions {
+    grid-column: 1;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .culture-values-table {
+    padding: 1.5rem;
+  }
+  
+  .service-signups {
+    flex-wrap: nowrap;
+    gap: 0.25rem;
+  }
+
+  .service-signups a {
+    width: auto;
+    flex: 1;
+    padding: 10px 4px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .culture-values-table tr {
+    grid-template-columns: 1fr;
+  }
+
+  .culture-values-table .value-description {
+    grid-column: 1;
+  }
+
+  .services-table tr {
+    grid-template-columns: 1fr;
+  }
+
+  .services-table .service-description {
+    grid-column: 1;
+  }
+
+}
+
+/*image grid box*/
+.image-grid-box {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.image-grid-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@media (max-width: 700px) {
+  .image-grid-box {
+    padding: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 3rem;
+  background: #bdf8c2;
+  border-top: 2px solid #5b351f;
+}
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 1rem;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+}
+.footer-column h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #5b351f;
+}
+.footer-column p {
+  margin: 0.25rem 0;
+}
+.footer-social {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: center;
+  gap: 0.75rem;
+  padding-right: 5rem;
+}
+.footer-social img {
+  display: block;
+  width: 29px;
+  height: 29px;
+  object-fit: contain;
+}
+.footer-social a:hover {
+  background-color: #41c9ff;
+  transition: background-color 0.3s ease;
+}
+.footer-copyright {
+  border-top: 1px solid #5b351f;
+  padding: 0.85rem 1rem;
+  text-align: center;
+}
+.footer-copyright p {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding-left: 1rem;
+  }
+  .footer-social {
+    justify-content: right;
+    padding-right: 3rem;
+  }
+    .footer-copyright p {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .footer-copyright p span:nth-child(2),
+  .footer-copyright p span:nth-child(4) {
+    display: none;
+  }
+}
